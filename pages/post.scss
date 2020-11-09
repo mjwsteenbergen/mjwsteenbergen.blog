@@ -8,6 +8,11 @@
     margin-left: auto;
     margin-right: auto;
     max-width: 80ch;
+    
+    p {
+        font-size: 1.25em;
+        line-height: 1.5em;
+    }
 
     .article-title {
         font-size: 4em;
@@ -52,6 +57,7 @@
         align-self: center;
         padding-left: 20px;
         font-size: 1.5em;
+        line-height: 1.5em;
         font-weight: 600;
     }
 
@@ -112,7 +118,6 @@
 
     .article {
         background-color: white;
-        font-size: 1.5em;
     }
 }
 
@@ -127,6 +132,11 @@
             margin-left: 30px;
             margin-right: 30px;
         }
+
+        .article-title {
+            word-wrap: break-word;
+            font-size: 3em;
+        }
         
         img {
             max-width: calc(100% - 60px);
@@ -138,7 +148,6 @@
 @media (max-width: 400px)
 {
     .article .article-title {
-        word-wrap: break-word;
         font-size: xx-large;
     }
 }

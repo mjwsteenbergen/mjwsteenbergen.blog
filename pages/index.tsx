@@ -12,7 +12,7 @@ export class IndexPage extends React.Component<Props, {}> {
 
   render() {
     return <Layout title="mjwsteenbergen-blog">
-      <h1 className="article-header">Martijn's Blog</h1>
+      <h1 className="article-header">Martijn Steenbergen</h1>
       <ul className="article-banner-holder">
         {
           this.props.items.map(i =>
