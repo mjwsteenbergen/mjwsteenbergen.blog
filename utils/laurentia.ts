@@ -45,7 +45,7 @@ export class BlogPosts {
         if(BlogPosts.result === undefined) 
         {
             var returnString = await (await fetch("https://zeus-laurentia.azurewebsites.net/api/run/blog2html?token=f75b831a-773c-4447-9c57-1827207e13ad")).text();
-            console.log(returnString);
+            // console.log(returnString);
             const value = Convert.toReply(returnString);
 
             // const value = <Reply>(<any>exampleText.default);
