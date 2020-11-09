@@ -7,26 +7,107 @@
 .article {
     margin-left: auto;
     margin-right: auto;
+    max-width: 80ch;
 
     .article-title {
         font-size: 4em;
         // min-width: 80ch;
-        margin-bottom: 10px;;
+        margin-top: 0;
+        padding-top: 0;
+        margin-bottom: 10px;
         max-width: 100%;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .back-to-main {
+        margin-top: 4em;
+        font-weight: 600;
+        color: gray;
+        margin-bottom: 0;
     }
 
 
     img {
         max-width: 100%;
         object-fit: cover;
+        max-height: 50vh;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
-@media(min-aspect-ratio: 8/5) and (min-width: 1000px) {
+.about-box {
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    padding: 30px;
+
+
+    p {
+        align-self: center;
+        padding-left: 20px;
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+
+    > img {
+        object-fit: contain;
+        width: 70vw;
+        max-height: 80vh;
+    }
+
+     a {
+        border: none;
+    }
+
+    a:hover {
+        background-color: transparent;
+    }
+
+    .about-box-box {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        height: fit-content;
+
+        .icon-container {
+            display: flex;
+            width: 80%;
+            max-width: 400px;
+            justify-content: space-between;
+            margin-top: 20px;
+            
+            img {
+                width: 50px;
+            }
+        }
+    }
+}
+
+@media(min-width: 1050px) {
     .coverimage {
         margin-left: -200px;
         margin-right: -200px;
         width: calc(100% + 400px);
+    }
+
+    .about-box {
+        margin-left: -200px;
+        margin-right: -200px;
+        max-width: calc(100% + 400px);
+        width: calc(100%);
+        padding-left: 200px;
+        padding-right: 200px;
+
+        p {
+            width: 500px;
+        }
     }
 
     .article {
@@ -35,21 +116,18 @@
     }
 }
 
-@media (max-width: 200px)
+@media(max-width: 1050px)
 {
-    .article .article-title {
-        word-wrap: break-word;
+    .about-box {
+        flex-direction: column;
     }
-}
 
-@media(max-width: 1000px)
-{
     .article {
         p, h1, h2, h3, img, .article-title {
             margin-left: 30px;
             margin-right: 30px;
         }
-
+        
         img {
             max-width: calc(100% - 60px);
         }
@@ -57,4 +135,11 @@
 }
 
 
+@media (max-width: 400px)
+{
+    .article .article-title {
+        word-wrap: break-word;
+        font-size: xx-large;
+    }
+}
 

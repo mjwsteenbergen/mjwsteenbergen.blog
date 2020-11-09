@@ -51,7 +51,7 @@ ul {
     }
 }
 
-@media(min-width: 1000px) {
+@media(min-width: 1050px) {
     body {
         margin: 0px 200px 0px;
     }
@@ -164,7 +164,7 @@ a:hover {
     background-color: rgb(231, 231, 231);
 }
 
-@media(max-width: 1000px)
+@media(max-width: 1050px)
 {
     .article-banner {
         cursor: pointer;
@@ -180,6 +180,8 @@ a:hover {
             grid-column: 1;
             width: 100%;
             filter: opacity(0.3);
+            object-fit: cover;
+            height: 25vh;
         }
 
         h3 {
