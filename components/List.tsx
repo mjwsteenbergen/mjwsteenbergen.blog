@@ -1,15 +1,15 @@
 import * as React from 'react'
 import ListItem from './ListItem'
-import { User } from '../interfaces'
+import { Result } from '../utils/laurentia'
 
 type Props = {
-  items: User[]
+  items: Result[]
 }
 
 const List = ({ items }: Props) => (
   <ul>
     {items.map((item) => (
-      <li key={item.id}>
+      <li key={item.slug}>
         <ListItem data={item} />
       </li>
     ))}
