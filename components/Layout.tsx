@@ -21,6 +21,13 @@ const Layout = (props: Props) => {
   return <div>
     <Head>
       <title>{title}</title>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTLDZDRMZH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){"{dataLayer.push(arguments);}"}
+        gtag('js', new Date());
+        gtag('config', 'G-GTLDZDRMZH');
+      </script>
 
       <meta name="og:title" content={title}/>
 
@@ -52,5 +59,6 @@ const Layout = (props: Props) => {
     </footer> */}
   </div>
 }
+
 
 export default Layout
