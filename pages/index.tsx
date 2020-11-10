@@ -11,7 +11,7 @@ type Props = {
 export class IndexPage extends React.Component<Props, {}> {
 
   render() {
-    return <Layout title="mjwsteenbergen-blog">
+    return <Layout description="The fun ramblings of a person who sometimes knows what he is doing">
       <h1 className="article-header">Martijn Steenbergen</h1>
       <ul className="article-banner-holder">
         {

@@ -24,9 +24,8 @@ const StaticPropsDetail = ({ item, errors }: Props) => {
 
   return (
     <Layout
-      title={`${
-        item ? item.name : 'User Detail'
-      } | mjwsteenbergen-blog`}
+      title={item?.name}
+      description={item?.shortDescription}
     >
       {image}
       <div className="article">
