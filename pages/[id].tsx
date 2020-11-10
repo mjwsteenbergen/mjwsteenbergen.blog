@@ -1,10 +1,10 @@
 import { GetStaticProps, GetStaticPaths } from 'next'
-
+import Link from 'next/link'
 import Layout from '../components/Layout'
-import { BlogPosts, Result } from '../utils/laurentia'
+import { BlogPosts, BlogPost } from '../utils/laurentia'
 
 type Props = {
-  item?: Result
+  item?: BlogPost
   errors?: string
 }
 
@@ -19,13 +19,16 @@ const StaticPropsDetail = ({ item, errors }: Props) => {
     )
   }
 
+
+  let image = item?.coverImage ? <img src={item?.coverImage} className="coverimage"></img> : "";
+
   return (
     <Layout
       title={`${
         item ? item.name : 'User Detail'
       } | mjwsteenbergen-blog`}
     >
-      <img src={item?.coverImage} className="coverimage"></img>
+      {image}
       <div className="article">
         <p className="back-to-main">By Martijn Steenbergen</p>
         <h1 className="article-title">{item?.name}</h1>

@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import { GetStaticProps } from 'next'
 import Layout from '../components/Layout'
-import { BlogPosts, Result } from '../utils/laurentia'
+import { BlogPosts, BlogPost } from '../utils/laurentia'
 import React from 'react'
 
 type Props = {
-  items: Result[]
+  items: BlogPost[]
 }
 
 export class IndexPage extends React.Component<Props, {}> {
@@ -35,7 +35,7 @@ export const getStaticProps: GetStaticProps = async () => {
   // Don't forget to include the respective types for any props passed into
   // the component.
 
-  let items = await BlogPosts.Get();
+  let items = (await BlogPosts.Get()).filter(i => i.isPublished);
   return { props: { items } }
 }
 

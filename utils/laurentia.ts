@@ -5,14 +5,15 @@ export interface Reply {
 
 export interface ActualReply {
     name:   string;
-    result: Result[];
+    result: BlogPost[];
     text:   string;
 }
 
-export interface Result {
+export interface BlogPost {
     name:      string;
     slug:      string;
-    published: Date;
+    isPublished: boolean;
+    publishDate: Date;
     html:      string;
     coverImage: string;
     shortDescription: string;
@@ -39,12 +40,15 @@ export class Convert {
 }
 
 export class BlogPosts {
-    static result:Result[];
+    static result:BlogPost[];
 
-    static async Get():Promise<Result[]> {
+    static async Get():Promise<BlogPost[]> {
         if(BlogPosts.result === undefined) 
         {
-            var returnString = await (await fetch("https://zeus-laurentia.azurewebsites.net/api/run/blog2html?token=f75b831a-773c-4447-9c57-1827207e13ad")).text();
+            // let base = "http://localhost:7071";
+            let base = "https://zeus-laurentia.azurewebsites.net";
+
+            var returnString = await (await fetch(base + "/api/run/blog2html?token=f75b831a-773c-4447-9c57-1827207e13ad")).text();
             // console.log(returnString);
             const value = Convert.toReply(returnString);
 
