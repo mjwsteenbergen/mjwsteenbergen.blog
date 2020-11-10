@@ -31,10 +31,6 @@ export class IndexPage extends React.Component<Props, {}> {
 }
  
 export const getStaticProps: GetStaticProps = async () => {
-  // Example for including static props in a Next.js function component page.
-  // Don't forget to include the respective types for any props passed into
-  // the component.
-
   let items = (await BlogPosts.Get()).filter(i => i.isPublished);
   return { props: { items } }
 }

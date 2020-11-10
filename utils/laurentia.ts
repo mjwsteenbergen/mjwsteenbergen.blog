@@ -45,8 +45,8 @@ export class BlogPosts {
     static async Get():Promise<BlogPost[]> {
         if(BlogPosts.result === undefined) 
         {
-            // let base = "http://localhost:7071";
-            let base = "https://zeus-laurentia.azurewebsites.net";
+            let base = "http://localhost:7071";
+            // let base = "https://zeus-laurentia.azurewebsites.net";
 
             var returnString = await (await fetch(base + "/api/run/blog2html?token=f75b831a-773c-4447-9c57-1827207e13ad")).text();
             // console.log(returnString);
