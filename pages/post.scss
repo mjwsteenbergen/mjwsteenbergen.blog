@@ -45,6 +45,24 @@
     }
 }
 
+.back-to-main-page {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80ch;
+    border: none;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    color: darkgray;
+
+    svg {
+        height: 20px;
+    }
+}
+
 .about-box {
     background-color: lightgrey;
     display: flex;
