@@ -59,7 +59,7 @@ ul {
     .article-banner-holder {
         display: grid;
         grid-template-columns: repeat(3, 33.3%);
-        grid-template-rows: repeat(5, 33.3%);
+        grid-template-rows: repeat(5, 33.3vh);
         margin-bottom: 60px;
         column-gap: 30px;
         row-gap: 30px;
@@ -128,12 +128,14 @@ ul {
     .article-banner:not(:first-child) {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr auto;
+        height: 100%;
 
        img {
             grid-row: 1;
             grid-column: 1;
             object-fit: cover;
             width: 100%;
+            overflow: hidden;
         }
 
         h3 {
