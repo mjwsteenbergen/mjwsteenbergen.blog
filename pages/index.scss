@@ -129,6 +129,10 @@ ul {
     .article-banner:hover {
         animation: hoveranimation 0.1s ease-in-out both ;
         box-shadow: rgba(69, 69, 77, 0.603) 0px 7px 29px 0px;
+
+        a {
+            background-color: transparent;
+        }
     }
 
     .article-banner:not(:first-child) {
