@@ -1,11 +1,14 @@
 import { GetStaticProps, GetStaticPaths } from 'next'
-import Link from 'next/link'
 import Layout from '../components/Layout'
 import { BlogPosts, BlogPost } from '../utils/laurentia'
 
 type Props = {
   item?: BlogPost
   errors?: string
+}
+
+export const config = {
+  unstable_runtimeJS: false
 }
 
 const StaticPropsDetail = ({ item, errors }: Props) => {
@@ -33,12 +36,12 @@ const StaticPropsDetail = ({ item, errors }: Props) => {
         <h1 className="article-title">{item?.name}</h1>
         <article dangerouslySetInnerHTML={{ __html: item?.html || "" }} ></article>
       </div>
-      <Link href="/"> 
+      <a href="/"> 
         <div className="back-to-main-page">
           <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><title>Arrow Back</title><path fill='none' stroke='currentColor' stroke-linecap='square' stroke-miterlimit='10' stroke-width='48' d='M244 400L100 256l144-144M120 256h292' /></svg>
           <p>View all posts</p>
         </div>
-      </Link>
+      </a>
       <div className="about-box">
         <img src="https://avatars0.githubusercontent.com/u/5946409"></img>
         <div className="about-box-box">

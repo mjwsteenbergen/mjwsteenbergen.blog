@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { GetStaticProps } from 'next'
 import Layout from '../components/Layout'
 import { BlogPosts, BlogPost } from '../utils/laurentia'
@@ -20,13 +19,13 @@ export class IndexPage extends React.Component<Props, {}> {
       <ul className="article-banner-holder">
         {
           this.props.items.map(i =>
-            <Link href={i.slug}>
-              <li className="article-banner">
+            <li className="article-banner">
+              <a href={i.slug}>
                 <h3>{i.name}</h3>
                 <p>{i.shortDescription}</p>
                 <img src={i.coverImage}></img>
-              </li>
-            </Link>
+              </a>
+            </li>
           )
         }
       </ul>
