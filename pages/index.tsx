@@ -19,7 +19,7 @@ export class IndexPage extends React.Component<Props, {}> {
       <ul className="article-banner-holder">
         {
           this.props.items.map(i =>
-            <li className="article-banner">
+            <li className="article-banner" key={i.name}>
               <a href={i.slug}>
                 <h3>{i.name}</h3>
                 <p>{i.shortDescription}</p>
