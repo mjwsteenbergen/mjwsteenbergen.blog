@@ -67,6 +67,7 @@
     background-color: lightgrey;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     margin-top: 30px;
     padding: 30px;
 
@@ -81,7 +82,7 @@
 
     > img {
         object-fit: contain;
-        width: 70vw;
+        max-width: 70vw;
         max-height: 80vh;
     }
 
