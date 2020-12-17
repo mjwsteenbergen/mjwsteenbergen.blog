@@ -9,9 +9,13 @@
     margin-right: auto;
     max-width: 80ch;
     
-    p {
+    p, li {
         font-size: 1.25em;
         line-height: 1.5em;
+    }
+
+    li {
+        margin-left: 30px;
     }
 
     .article-title {
