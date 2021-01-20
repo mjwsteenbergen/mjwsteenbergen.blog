@@ -17,6 +17,9 @@
 
 :root {
     --title-font: 'Geometria', 'Geometria-light', sans-serif;
+    --background: rgb(254, 254, 254);
+    --gray:  rgba(100, 100, 111, 0.2);
+    --dark-gray: rgba(69, 69, 77, 0.603);
 }
 
 h1, h2, h3 {
@@ -25,7 +28,7 @@ h1, h2, h3 {
 
 body {
     font-family: 'Inter';
-    background-color: rgb(254, 254, 254);
+    background-color: var(--background);
     margin: 0;
 }
 
@@ -127,7 +130,7 @@ ul {
     }
 
     .article-banner:hover {
-        animation: hoveranimation 0.1s ease-in-out both ;
+        animation: hoveranimation 0.1s ease-in-out both;
         box-shadow: rgba(69, 69, 77, 0.603) 0px 7px 29px 0px;
 
         a {
