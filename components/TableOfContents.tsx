@@ -53,7 +53,7 @@ export class TableOfContents extends React.Component<{}, TOCState> {
 
         return <div id="tableofcontents-wrapper">
             <h1><a id="tableofcontents-toggle" href="#tableofcontents">Table of Contents</a></h1>
-                <ul id="tableofcontents">{this.state.toc}</ul>
+                <ul id="tableofcontents">{this.state?.toc}</ul>
             </div>
     }
 }
