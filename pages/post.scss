@@ -202,7 +202,7 @@
     }
 
     .article {
-        p, h1, h2, h3, img, .article-title {
+        p, h1, h2, h3, figure, .article-title {
             margin-left: 30px;
             margin-right: 30px;
         }
@@ -214,6 +214,11 @@
         
         figure {
             max-width: calc(100% - 60px);
+        }
+
+        .column-parent {
+            flex-wrap: wrap;
+            justify-content: center;
         }
     }
 }
