@@ -35,7 +35,7 @@ const StaticPropsDetail = ({ item, errors }: Props) => {
       <div className="article">
         <p className="back-to-main">By Martijn Steenbergen</p>
         <h1 className="article-title">{item?.name}</h1>
-        <TableOfContents html={item?.html ?? ""}/>
+        <TableOfContents/>
         <article dangerouslySetInnerHTML={{ __html: item?.html || "" }} ></article>
       </div>
       <a href="/"> 
