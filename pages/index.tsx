@@ -1,6 +1,5 @@
-import { GetStaticProps } from 'next'
 import Layout from '../components/Layout'
-import { BlogPosts, BlogPost } from '../utils/laurentia'
+import { BlogPost } from '../utils/laurentia'
 import React from 'react'
 
 type Props = {
@@ -31,11 +30,6 @@ export class IndexPage extends React.Component<Props, {}> {
       </ul>
     </Layout>
   }
-}
- 
-export const getStaticProps: GetStaticProps = async () => {
-  let items = (await BlogPosts.Get()).filter(i => i.isPublished);
-  return { props: { items } }
 }
 
 export default IndexPage
