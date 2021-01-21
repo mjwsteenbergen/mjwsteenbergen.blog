@@ -13,7 +13,7 @@ export const config = {
   unstable_runtimeJS: false
 }
 
-export default class IndexPage extends React.Component<Props,{}> {
+export default class PostPage extends React.Component<Props,{}> {
   render() {
     const item = this.props.item;
     let image = item?.coverImage ? <img src={item?.coverImage} className="coverimage"></img> : "";
@@ -27,7 +27,7 @@ export default class IndexPage extends React.Component<Props,{}> {
         <div className="article">
           <p className="back-to-main">By Martijn Steenbergen</p>
           <h1 className="article-title">{item?.name}</h1>
-          <TableOfContents />
+          {process.browser && <TableOfContents />}
           <article dangerouslySetInnerHTML={{ __html: item?.html || "" }} ></article>
         </div>
         <a href="/">
