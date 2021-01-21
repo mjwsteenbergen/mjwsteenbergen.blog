@@ -7,10 +7,6 @@ type Props = {
   items: BlogPost[]
 }
 
-export const config = {
-  unstable_runtimeJS: false
-}
-
 export class IndexPage extends React.Component<Props, {}> {
 
   render() {

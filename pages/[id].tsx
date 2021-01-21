@@ -9,10 +9,6 @@ type Props = {
   errors?: string
 }
 
-export const config = {
-  unstable_runtimeJS: false
-}
-
 export default class PostPage extends React.Component<Props,{}> {
   render() {
     const item = this.props.item;
