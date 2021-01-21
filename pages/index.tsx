@@ -1,6 +1,7 @@
 import Layout from '../components/Layout'
-import { BlogPost } from '../utils/laurentia'
+import { BlogPost, BlogPosts } from '../utils/laurentia'
 import React from 'react'
+import { GetStaticProps } from 'next'
 
 type Props = {
   items: BlogPost[]
@@ -33,3 +34,17 @@ export class IndexPage extends React.Component<Props, {}> {
 }
 
 export default IndexPage
+
+// This function gets called at build time on server-side.
+// It won't be called on client-side, so you can even do
+// direct database queries.
+export const getStaticProps: GetStaticProps = async () => {
+  try {
+    // By returning { props: item }, the StaticPropsDetail component
+    // will receive `item` as a prop at build time
+    const items = (await BlogPosts.Get()).filter(i => i.isPublished);
+    return { props: { items } };
+  } catch (err) {
+    return { props: { errors: err.message } }
+  }
+}
