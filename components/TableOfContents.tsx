@@ -1,33 +1,7 @@
 import React from 'react'
 
-type TOCProps = {
-    html: string
-}
-
-type TOCState = {
-    toc: JSX.Element[]
-}
-
-export class TableOfContents extends React.Component<TOCProps, TOCState> {
-
-    componentDidMount()
-    {
-        if (process.browser) {
-            let res: JSX.Element[] = [];
-            
-            let newDoc = document.createElement("template");
-            newDoc.innerHTML = this.props.html;
-            console.log(newDoc);
-            console.log(newDoc);
-
-            this.parse(0, newDoc.content.children, 1, res);
-
-            this.setState({
-                toc: res
-            });
-        }
-    }
-
+export class TableOfContents extends React.Component<{}, {}> {
+    
     parse(cIndex: number, content: HTMLCollection, currentIndentation: number, state: JSX.Element[]) : number
     {
         for (let index = cIndex; index < content.length; index++) {
@@ -58,9 +32,17 @@ export class TableOfContents extends React.Component<TOCProps, TOCState> {
     }
 
     render() {
+        let res: JSX.Element[] = [];
+
+        if (process.browser) {
+            let newDoc = document.getElementsByTagName("article")[0];
+
+            this.parse(0, newDoc.children, 1, res);
+        }
+
         return <div id="tableofcontents-wrapper">
             <h1><a id="tableofcontents-toggle" href="#tableofcontents">Table of Contents</a></h1>
-                <ul id="tableofcontents">{this.state?.toc ?? []}</ul>
+                <ul id="tableofcontents">{res}</ul>
             </div>
     }
 }
