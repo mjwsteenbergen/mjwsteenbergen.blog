@@ -1,0 +1,143 @@
+#tableofcontents {
+    ul {
+        padding-left: 35px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media(max-width: 200ch), (not(hover))
+{
+    #tableofcontents-wrapper {
+        h1::before {
+            content: "View ";
+        }
+
+        h1 {
+            color: darkgray;
+            font-size: x-large;
+        }
+
+        #tableofcontents {
+            scroll-margin-top: 100px;
+            display: none;
+
+            &:target {
+                display: inherit;
+                opacity       : 1;
+                pointer-events: auto;
+            }
+        }
+    }
+}
+
+#tableofcontents-wrapper {
+
+    h1 {
+        a {
+            border-bottom: none;
+
+            &:hover {
+                background-color: inherit;
+            }
+        }
+    }
+}
+
+@media(min-width: 200ch) and (hover) {
+    #tableofcontents-wrapper {
+        position: fixed;
+        left    : 0;
+        top     :0;
+        bottom  : 0;
+
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        height         : 100vh;
+
+        h1 {
+            margin-left: 15px;
+            font-size: medium;
+            color: lighten($color: black, $amount: 40%);
+
+            
+        }
+
+        #tableofcontents {
+    
+            li {
+                font-size: small;
+                height: 20px;
+                margin-left: 15px;
+                list-style-type: none;
+    
+                a {
+                    border-bottom-color: transparent;
+                }
+            }
+    
+    
+            
+        }
+    }
+
+
+    #tableofcontents:hover {
+        li {
+            transition : transform 0.3s;
+            transform-origin: left;
+            a {
+                border-bottom-color: white;
+            }
+        }
+
+        ul {
+            padding-left: 20px;
+            transition  : padding-left 0.3s;
+        }
+    }
+
+    
+
+    #tableofcontents:not(:hover)
+    {
+        li {
+            transform: translateY(0px) scale(0.5, 0.1);
+
+            &.h1 a {
+                background-color: lighten($color: black, $amount: 60%);
+            }
+
+            &.h2 a {
+                background-color: lighten($color: black, $amount: 75%);
+            }
+
+            &.h3 a {
+                background-color: lighten($color: black, $amount: 80%);
+            }
+
+            transform-origin: left;
+            color: transparent;
+            a {
+                border-top-right-radius: 3px 50%;
+                border-bottom-right-radius: 3px 50%;
+            }
+        }
+
+        ul {
+            padding-left: 0px;
+        }
+    }
+}
+
+@media(max-width: 1050px) {
+    
+}
+
+
+@media (max-width: 400px) {
+    
+}

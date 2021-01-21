@@ -1,5 +1,6 @@
 import './index.scss'
 import './post.scss';
+import '../components/TableOfContents.scss';
 
 export const config = {
     unstable_runtimeJS: false

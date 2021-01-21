@@ -1,5 +1,6 @@
 import { GetStaticProps, GetStaticPaths } from 'next'
 import Layout from '../components/Layout'
+import TableOfContents from '../components/TableOfContents'
 import { BlogPosts, BlogPost } from '../utils/laurentia'
 
 type Props = {
@@ -34,6 +35,7 @@ const StaticPropsDetail = ({ item, errors }: Props) => {
       <div className="article">
         <p className="back-to-main">By Martijn Steenbergen</p>
         <h1 className="article-title">{item?.name}</h1>
+        <TableOfContents html={item?.html ?? ""}/>
         <article dangerouslySetInnerHTML={{ __html: item?.html || "" }} ></article>
       </div>
       <a href="/"> 
