@@ -14,7 +14,8 @@ const Layout = (props: Props) => {
   {
     description = [
       <meta name="twitter:description" content={props.description}/>,
-      <meta name="og:description" content={props.description}/>,
+      <meta name="og:description" content={props.description} />,
+      <meta name="description" content={props.description}/>,
       <meta name="twitter:description" content={props.description}/>
     ]
   }
