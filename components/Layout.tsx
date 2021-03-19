@@ -16,7 +16,8 @@ const Layout = (props: Props) => {
       <meta name="twitter:description" content={props.description}/>,
       <meta name="og:description" content={props.description} />,
       <meta name="description" content={props.description}/>,
-      <meta name="twitter:description" content={props.description}/>
+      <meta name="twitter:description" content={props.description} />,
+      <link rel="alternate" type="application/rss+xml" title="NNTN Blog" href="/feed/"/>
     ]
   }
   const code = `

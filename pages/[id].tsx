@@ -40,6 +40,7 @@ export default class PostPage extends React.Component<Props,{}> {
               <a target="blank" href="https://github.com/mjwsteenbergen/"><img src="/icons/logo-github.svg"></img></a>
               <a target="blank" href="https://www.linkedin.com/in/mjwsteenbergen/"><img src="/icons/logo-linkedin.svg"></img></a>
               <a target="blank" href="https://twitter.com/mjwsteenbergen/"><img src="/icons/logo-twitter.svg"></img></a>
+              <a target="blank" href="/feed/"><img src="/icons/logo-rss.svg"></img></a>
             </div>
           </div>
         </div>
