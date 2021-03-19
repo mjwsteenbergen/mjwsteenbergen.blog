@@ -35,7 +35,7 @@ export default class PostPage extends React.Component<Props,{}> {
         <div className="about-box">
           <img src="https://avatars0.githubusercontent.com/u/5946409"></img>
           <div className="about-box-box">
-            <p>Hi! I'm Martijn Steenbergen. I am a Software Engineer at BOL.com, helping you find what you need. I got my M.Sc. at the wonderful Technical University of Delft. I love automating anything and everything. I'm fascinated with design, how the world works and everything else</p>
+            <p>Hi! I'm Martijn Steenbergen. I am a Software Engineer at bol.com, helping you find what you need. I got my M.Sc. at the wonderful Technical University of Delft. I love automating my life (music, lights, calendar and more). I'm fascinated with design, how the world works and everything else</p>
             <div className="icon-container">
               <a target="blank" href="https://github.com/mjwsteenbergen/"><img src="/icons/logo-github.svg"></img></a>
               <a target="blank" href="https://www.linkedin.com/in/mjwsteenbergen/"><img src="/icons/logo-linkedin.svg"></img></a>
