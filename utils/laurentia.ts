@@ -1,12 +1,12 @@
 export interface Reply {
-    reply: ActualReply;
-    state: State;
+    Reply: ActualReply;
+    State: State;
 }
 
 export interface ActualReply {
-    name:   string;
-    result: BlogPost[];
-    text:   string;
+    Name:   string;
+    Result: BlogPost[];
+    Text:   string;
 }
 
 export interface BlogPost {
@@ -56,7 +56,7 @@ export class BlogPosts {
 
             // const value = <Reply>(<any>exampleText.default);
 
-            BlogPosts.result = value.reply.result;
+            BlogPosts.result = value.Reply.Result;
         }
 
         return BlogPosts.result;
