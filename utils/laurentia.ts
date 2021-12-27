@@ -54,7 +54,7 @@ export class BlogPosts {
             // console.log(returnString);
             const value = Convert.toReply(returnString);
 
-            // const value = <Reply>(<any>exampleText.default);
+            // const value = <Reply>((<any>exampleText).default);
 
             BlogPosts.result = value.Reply.Result;
         }

@@ -2,6 +2,7 @@ import Layout from '../components/Layout'
 import { BlogPost, BlogPosts } from '../utils/laurentia'
 import React from 'react'
 import { GetStaticProps } from 'next'
+import generateRssFeed from '../scripts/feed'
 
 type Props = {
   items: BlogPost[]
@@ -35,6 +36,7 @@ export default IndexPage
 // It won't be called on client-side, so you can even do
 // direct database queries.
 export const getStaticProps: GetStaticProps = async () => {
+  await generateRssFeed();
   try {
     // By returning { props: item }, the StaticPropsDetail component
     // will receive `item` as a prop at build time
