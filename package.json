@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "feed": "^4.2.2",
-    "next": "latest",
+    "next": "13.4.3",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "sass": "^1.29.0"
