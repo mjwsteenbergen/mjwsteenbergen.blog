@@ -8,7 +8,7 @@ html {
     scroll-behavior: smooth;
 }
 
-@media(max-width: 200ch), (not(hover))
+@media(max-width: 200ch)
 {
     #tableofcontents-wrapper {
         h1::before {
@@ -46,7 +46,7 @@ html {
     }
 }
 
-@media(min-width: 200ch) and (hover) {
+@media(min-width: 200ch) {
     #tableofcontents-wrapper {
         position: fixed;
         left    : 0;
