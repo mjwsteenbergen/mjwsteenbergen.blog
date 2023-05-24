@@ -43,6 +43,6 @@ export const getStaticProps: GetStaticProps = async () => {
     const items = (await BlogPosts.Get()).filter(i => i.isPublished);
     return { props: { items } };
   } catch (err) {
-    return { props: { errors: err.message } }
+    return { props: { errors: (err as any)?.message } }
   }
 }
