@@ -35,7 +35,7 @@
     margin-right: auto;
     max-width: 80ch;
     
-    p, li, code {
+    p, li, code, a {
         font-size: 1.25em;
         line-height: 1.5em;
     }
@@ -211,6 +211,12 @@
 
     .article {
         p, h1, h2, h3, figure, .article-title {
+            margin-left: 30px;
+            margin-right: 30px;
+            overflow-wrap: anywhere;
+        }
+
+        > a {
             margin-left: 30px;
             margin-right: 30px;
             overflow-wrap: anywhere;
