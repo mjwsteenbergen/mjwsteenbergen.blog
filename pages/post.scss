@@ -35,7 +35,7 @@
     margin-right: auto;
     max-width: 80ch;
     
-    p, li {
+    p, li, code {
         font-size: 1.25em;
         line-height: 1.5em;
     }
@@ -85,6 +85,14 @@
 
     img {
         max-width: 100%;
+    }
+
+    pre {
+        padding: 1rem;
+        background-color: #DBDBDB;
+        line-height: 1.5rem;
+        border-radius: 3px;
+        white-space: pre-wrap;
     }
 
     figure {
